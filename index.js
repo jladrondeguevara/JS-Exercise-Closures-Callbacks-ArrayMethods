@@ -303,12 +303,12 @@ function tallyUpDonations(/* CODE HERE */) {
  * @instructions
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
- * 1. What is the difference between counter1 and counter2?
- * 
- * 2. Which of the two uses a closure? How can you tell?
+ * 1. What is the difference between counter1 and counter2? In counter1, there is a new counterMaker made, to be used a reference for the rest of the program. Meaning that that function is stored in memory and thus being able to increment the counter everytime it's called.
+ * counter2 will always return 1, since it will always reference the count declared outside the function. There is no allocation for this fucntion.
+ * 2. Which of the two uses a closure? How can you tell? Counter1 uses a closure, and we can tell by looking at the contents inside the function in which we see another function being declared inside.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *Counter1 is the most common counter, as it is used to keep track of things, usually incrementing. Counter2 may be used as a temporary way, or more so for timing purposes. As this type of counter gets sent to the garbage collector once it has been used.
 */
 
 // counter1 code
