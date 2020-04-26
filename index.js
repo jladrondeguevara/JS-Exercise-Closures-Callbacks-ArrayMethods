@@ -240,7 +240,7 @@ function stringSmash(strings) {
 function getFullNames(runners) {
   const fullNames = [];
   runners.forEach(element => {
-    fullNames.push(element.last_name + ", " + element.first_name);
+    fullNames.push(`${element.last_name}, ${element.first_name}`);
   })
   return fullNames; 
 }
